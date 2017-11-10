@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev1": "node-dev ./bin/www",
-    "dev": "node-dev --debug-brk=58382 --expose_debug_as=v8debug ./bin/www",
-    "debug": "node-inspector --web-port 3000 --debug-port 58382"
+    "hotdev": "node-dev ./bin/www",
+    "debug-watch": "node-inspector --web-port 3788 --debug-port 58382",
+    "dev": "node --debug=58382 --expose_debug_as=v8debug ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -16,5 +16,8 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "moment": "^2.19.1"
   }
 }
